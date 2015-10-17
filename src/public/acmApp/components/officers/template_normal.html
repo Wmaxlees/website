@@ -1,9 +1,23 @@
-<li>
-    <img ng-src="controller.officer.photo" /> <br />
-    <p>Name: {{ controller.officer.name }}</p>
-    <p>Position: {{ controller.officer.position }}</p>
-    <p>Year: {{ controller.officer.year }}</p>
-    <p>Email: {{ controller.officer.email }}</p>
-    <p>{{ controller.officer.bio }}</p>
-    <p><button ng-click="controller.swap()">Edit</button></p>
-</li>
+<div class="panel panel-default">
+    <div class="panel-heading clearfix">
+        <div class="panel-title col-md-3" style="margin-top: 7px;">{{controller.officer.name}}</div>
+        <div class="pull-right">
+            <button class="btn" ng-click="controller.swap()">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-3">
+            <img width="70px" height="88px" ng-src="img/{{controller.officer.photo}}" />
+        </div>
+
+        <div class="col-md-8">
+            <b>{{controller.officer.position}}</b><br/>
+            {{controller.officer.year}}<br/>
+            {{controller.officer.email}}<br/>
+            <hr>
+            {{controller.officer.bio}}
+        </div>
+    </div>
+</div>

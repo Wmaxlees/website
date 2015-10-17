@@ -1,7 +1,12 @@
-<ul>
-    <li ng-repeat="article in controller.articles">
-        "{{ article.subject }}"  by {{ article.author }} on {{ article.createdDate | date }} 
-        </br>
-        {{ article.body }}
-    </li>
-</ul>
+<div class="container" style="margin-top: 2em;">
+    <div class="panel panel-default" ng-repeat="article in controller.articles">
+        <div class="panel-heading">
+            <span class="panel-title"><b>{{article.subject}}</b></span>
+            <span style="font-size: 12px;">by {{article.author}}</span>
+            <span style="font-size: 12px; margin-top: 6px;" class="pull-right">{{article.createdDate | date}}</span>
+        </div>
+        <div class="panel-body">
+            {{article.body}}
+        </div>
+    </div>
+</div>
